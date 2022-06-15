@@ -22,15 +22,17 @@ export default defineComponent({
     return () => (
       <>
         <Home />
-        <CalendarHeatmap
-          values={values}
-          endDate={new Date()}
-          range-color={['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']}
-          style={{ 'max-width:': (orientation.value == 'vertical' ? '145px' : '675px') }}
-          vertical={orientation.value === 'vertical'}
-          noDataText="NOTHING"
-          round={2}
-        ></CalendarHeatmap>
+        <div style="width:200px">
+          <CalendarHeatmap
+            values={values}
+            endDate={new Date()}
+            showDateNum={80}
+            range-color={['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']}
+            vertical={orientation.value === 'vertical'}
+            noDataText="NOTHING"
+            round={2}
+          ></CalendarHeatmap>
+        </div>
       </>
     )
   }

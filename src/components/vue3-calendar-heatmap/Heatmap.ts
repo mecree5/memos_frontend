@@ -64,16 +64,18 @@ export class Heatmap {
   startDate: Date;
   endDate: Date;
   max: number;
+  showDateNum: number;
 
   private _values: Value[];
   private _firstFullWeekOfMonths?: Month[];
   private _activities?: Activities;
   private _calendar?: Calendar;
 
-  constructor(endDate: Date | string, values: Value[], max?: number) {
+  constructor(endDate: Date | string, values: Value[], max?: number, showDateNum?: number) {
     this.endDate = this.parseDate(endDate);
     this.max = max || Math.ceil((Math.max(...values.map(day => day.count)) / 5) * 4);
-    this.startDate = this.shiftDate(endDate, -Heatmap.DAYS_IN_ONE_YEAR);
+    this.showDateNum = showDateNum || Heatmap.DAYS_IN_ONE_YEAR
+    this.startDate = this.shiftDate(endDate, -this.showDateNum);
     this._values = values;
   }
 
@@ -164,7 +166,7 @@ export class Heatmap {
   }
 
   getDaysCount() {
-    return Heatmap.DAYS_IN_ONE_YEAR + 1 + this.getCountEmptyDaysAtStart() + this.getCountEmptyDaysAtEnd();
+    return this.showDateNum + 1 + this.getCountEmptyDaysAtStart() + this.getCountEmptyDaysAtEnd();
   }
 
   private shiftDate(date: Date | string, numDays: number) {

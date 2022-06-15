@@ -51,6 +51,10 @@ export default defineComponent({
       type: Number,
       default: 0
     },
+    showDateNum:{
+      type: Number,
+      default: 65
+    },
     darkMode: Boolean
   },
   emits: ['dayClick'],
@@ -66,7 +70,7 @@ export default defineComponent({
 
       svg = ref<null | SVGElement>(null),
       now = ref(new Date()),
-      heatmap = ref(new Heatmap(props.endDate as Date, props.values, props.max)),
+      heatmap = ref(new Heatmap(props.endDate as Date, props.values, props.max, props.showDateNum)),
 
       width = ref(0),
       height = ref(0),
@@ -163,7 +167,7 @@ export default defineComponent({
     watch(
       [values, tooltipUnit, tooltipFormatter, noDataText, max, rangeColor],
       () => {
-        heatmap.value = new Heatmap(props.endDate as Date, props.values, props.max);
+        heatmap.value = new Heatmap(props.endDate as Date, props.values, props.max, props.showDateNum);
         tippyInstances?.map(i => i.destroy());
         nextTick(initTippy);
       }
