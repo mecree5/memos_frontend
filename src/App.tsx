@@ -1,7 +1,7 @@
 import { defineComponent, reactive, ref } from 'vue';
 import './App.css'
-import Home from './page/home';
-import { CalendarHeatmap } from 'vue3-calendar-heatmap';
+import Home from './pages/home';
+import { CalendarHeatmap } from './components/vue3-calendar-heatmap';
 
 export default defineComponent({
   props: {
@@ -25,6 +25,7 @@ export default defineComponent({
         <CalendarHeatmap
           values={values}
           endDate={new Date()}
+          range-color={['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']}
           style={{ 'max-width:': (orientation.value == 'vertical' ? '145px' : '675px') }}
           vertical={orientation.value === 'vertical'}
           noDataText="NOTHING"
