@@ -27,7 +27,7 @@ export default defineComponent({
             values={values}
             endDate={new Date()}
             showDateNum={80}
-            range-color={['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']}
+            rangeColor={['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']}
             vertical={orientation.value === 'vertical'}
             noDataText="NOTHING"
             round={2}
