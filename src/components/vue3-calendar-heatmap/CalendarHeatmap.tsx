@@ -51,7 +51,10 @@ export default defineComponent({
       type: Number,
       default: 0
     },
-    showDateNum:{
+    /**
+     * The heatmap map shows the number of dates between showDateNum and showDateNum + 7.
+     */
+    showDateNum: {
       type: Number,
       default: 65
     },
