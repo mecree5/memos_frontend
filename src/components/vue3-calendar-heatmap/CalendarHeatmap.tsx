@@ -58,7 +58,11 @@ export default defineComponent({
       type: Number,
       default: 65
     },
-    darkMode: Boolean
+    darkMode: Boolean,
+    showLable: {
+      type: Boolean,
+      default: false
+    }
   },
   emits: ['dayClick'],
   setup(props, { emit }) {
@@ -273,38 +277,39 @@ export default defineComponent({
             </g>
           </svg >
 
-
-          <div class="vch__legend">
-            <slot name="legend">
-              <div class="vch__legend-left">
-                <slot name="vch__legend-left"></slot>
-              </div>
-              <div class="vch__legend-right">
-                <slot name="legend-right">
-                  <div class="vch__legend">
-                    <div>{lo.value.less}</div>
-                    {!vertical.value && <svg class="vch__external-legend-wrapper" viewBox={legendViewbox.value} height={SQUARE_SIZE - SQUARE_BORDER_SIZE}>
-                      <g class="vch__legend__wrapper">
-                        {curRangeColor.value.map((color, index) => (
-                          <rect
-                            key={index}
-                            rx={props.round}
-                            ry={props.round}
-                            style={{ fill: color }}
-                            width={SQUARE_SIZE - SQUARE_BORDER_SIZE}
-                            height={SQUARE_SIZE - SQUARE_BORDER_SIZE}
-                            x={SQUARE_SIZE * index}
-                            y={0}
-                          />
-                        ))}
-                      </g>
-                    </svg>}
-                    <div>{lo.value.more}</div>
-                  </div>
-                </slot>
-              </div>
-            </slot>
-          </div>
+          {props.showLable &&
+            <div class="vch__legend">
+              <slot name="legend">
+                <div class="vch__legend-left">
+                  <slot name="vch__legend-left"></slot>
+                </div>
+                <div class="vch__legend-right">
+                  <slot name="legend-right">
+                    <div class="vch__legend">
+                      <div>{lo.value.less}</div>
+                      {!vertical.value && <svg class="vch__external-legend-wrapper" viewBox={legendViewbox.value} height={SQUARE_SIZE - SQUARE_BORDER_SIZE}>
+                        <g class="vch__legend__wrapper">
+                          {curRangeColor.value.map((color, index) => (
+                            <rect
+                              key={index}
+                              rx={props.round}
+                              ry={props.round}
+                              style={{ fill: color }}
+                              width={SQUARE_SIZE - SQUARE_BORDER_SIZE}
+                              height={SQUARE_SIZE - SQUARE_BORDER_SIZE}
+                              x={SQUARE_SIZE * index}
+                              y={0}
+                            />
+                          ))}
+                        </g>
+                      </svg>}
+                      <div>{lo.value.more}</div>
+                    </div>
+                  </slot>
+                </div>
+              </slot>
+            </div>
+          }
         </div >
 
       </>
