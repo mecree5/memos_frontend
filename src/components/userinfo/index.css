@@ -1,0 +1,19 @@
+.flex-layout,
+.flex-layout-column{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-layout-column{
+  flex-direction: column;
+}
+
+.info-text-25,
+.info-text-15{
+  font-size: 25px;
+  font-weight: bolder;
+  color: #DDD;
+}
+.info-text-15{
+  font-size: 15px;
+}
