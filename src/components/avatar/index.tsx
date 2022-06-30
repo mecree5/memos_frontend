@@ -12,10 +12,8 @@ export default defineComponent({
   setup(props) {
     return () => (
       <>
-        <div class="avatar-border">
-          <div class="avatar-container">
-            <img src={props.url}></img>
-          </div>
+        <div class="w-24 h-24 rounded-full border-2 overflow-hidden">
+            <img class="" src={props.url}></img>
         </div>
       </>
     )

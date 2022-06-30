@@ -1,19 +1,9 @@
-.flex-layout,
-.flex-layout-column{
-  display: flex;
-  justify-content: space-between;
+.info-text-container{
+  @apply flex justify-between flex-col px-2
 }
-
-.flex-layout-column{
-  flex-direction: column;
+.info-text-num{
+ @apply text-2xl text-gray-300 font-bold text-left
 }
-
-.info-text-25,
-.info-text-15{
-  font-size: 25px;
-  font-weight: bolder;
-  color: #DDD;
-}
-.info-text-15{
-  font-size: 15px;
+.info-text-name{
+  @apply text-lg text-gray-300 font-bold text-left
 }

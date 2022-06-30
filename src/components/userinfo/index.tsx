@@ -10,27 +10,27 @@ export default defineComponent({
   setup(props) {
     return () => (
       <>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{padding: "3px"}}>
+        <div class="flex justify-between">
+          <div class="">
             <Avatar />
           </div>
-          <div class="flex-layout-column" style={{ width: "100%" }}>
-            <div class="flex-layout" style={{ width: "100%", paddingTop: "8px" }}>
-              <span class="info-text-25" style={{ color: "#5F5F5F" }}>Maiiiiiid</span>
+          <div class="flex flex-col justify-between">
+            <div class="flex justify-between px-2">
+              <div class="text-2xl text-gray-600 font-bold">Maiiiiiid</div>
               <i></i>
             </div>
-            <div class="flex-layout" style={{ width: "100%", paddingBottom: "8px" }}>
-              <div class="flex-layout-column">
-                <span class="info-text-25">304</span>
-                <span class="info-text-15">Memos</span>
+            <div class="flex justify-between">
+              <div class="info-text-container">
+                <div class="info-text-num">304</div>
+                <div class="info-text-name">Memos</div>
               </div>
-              <div class="flex-layout-column">
-                <span class="info-text-25">34</span>
-                <span class="info-text-15">Tags</span>
+              <div class="info-text-container">
+                <div class="info-text-num">34</div>
+                <div class="info-text-name">Tags</div>
               </div>
-              <div class="flex-layout-column">
-                <span class="info-text-25">304</span>
-                <span class="info-text-15">Days</span>
+              <div class="info-text-container">
+                <div class="info-text-num">304</div>
+                <div class="info-text-name">Days</div>
               </div>
             </div>
           </div>
