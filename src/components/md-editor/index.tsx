@@ -44,8 +44,9 @@ export default defineComponent({
 
     return () => (
       <>
-        <div class="border-4 border-gray-100 w-full h-fit rounded z-10" onDblclick={onDoubleClick}>
+        <div class="border-4 border-gray-100 w-full h-fit rounded-2xl z-10 overflow-hidden" onDblclick={onDoubleClick}>
         <v-md-editor
+          placeholder="Any thounghts..."
           modelValue={props.modelValue}
           onUpdate:modelValue={onInput}
           height={props.height + "px"}

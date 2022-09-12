@@ -2,3 +2,10 @@
 .v-md-editor__todo-list-checkbox--checked::after{
   box-sizing: initial;
 }
+
+.v-md-editor__toolbar{
+  border-bottom: 3px solid RGB(243, 244, 246) !important;
+}
+[class*=v-md-icon-]{
+  color: #777 !important;
+}

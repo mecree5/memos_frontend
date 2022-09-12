@@ -7,7 +7,7 @@ import "./index.css";
 export default defineComponent({
   name: "Home",
   setup() {
-    const text = ref('Any thounghts...');
+    const text = ref('');
     let mode = ref(MODE.EDIT);
 
     return () => (
