@@ -12,7 +12,7 @@ export default defineComponent({
     return () => (
       <>
         <div class="w-24 h-24 rounded-full border-2 overflow-hidden">
-            <img class="" src={props.url}></img>
+            <img class="" src={props.url} alt="加载失败" title="用户头像"></img>
         </div>
       </>
     )
