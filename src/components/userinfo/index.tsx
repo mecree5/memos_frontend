@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import Avatar from "../avatar";
+import Avatar from "/@/components/avatar";
 import "./index.css"
 
 export default defineComponent({
