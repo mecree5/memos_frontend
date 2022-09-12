@@ -1,9 +1,12 @@
 .info-text-container{
   @apply flex justify-between flex-col px-2
 }
+.info-text{
+  @apply text-gray-300 font-bold text-left 
+}
 .info-text-num{
- @apply text-2xl text-gray-300 font-bold text-left
+ @apply info-text text-2xl
 }
 .info-text-name{
-  @apply text-lg text-gray-300 font-bold text-left
+  @apply info-text text-lg
 }
