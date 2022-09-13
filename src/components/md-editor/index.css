@@ -2,10 +2,26 @@
 .v-md-editor__todo-list-checkbox--checked::after{
   box-sizing: initial;
 }
+.v-md-editor__left-area{
+  border-right: 2px solid RGB(243, 244, 246) !important;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 0px;
+  margin-left: -2px;
+}
 
 .v-md-editor__toolbar{
   border-bottom: 3px solid RGB(243, 244, 246) !important;
 }
+
+.v-md-editor__left-area-title::after{
+  border-bottom: 3px solid RGB(243, 244, 246) !important;
+}
+
+.v-md-editor--editable .v-md-editor__editor-wrapper{
+  border-right: 3px solid RGB(243, 244, 246) !important;
+}
+
 [class*=v-md-icon-]{
   color: #777 !important;
 }
